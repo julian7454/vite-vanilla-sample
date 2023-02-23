@@ -1,0 +1,35 @@
+@mixin pad {
+  @media(min-width: 1024px) {
+    @content;
+  }
+}
+
+@import "mobile";
+@import "pad";
+
+:root {
+  font-family: "Noto Sans SC", Helvetica, Arial, sans-serif;
+  background-color: #151317;
+  color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.lang {
+
+  .lang__item {
+    height: 0;
+    overflow: hidden;
+
+    &.select {
+      height: auto;
+    }
+  }
+}
+
+.select-menu {
+  cursor: pointer;
+}
