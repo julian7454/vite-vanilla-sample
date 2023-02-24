@@ -1,4 +1,5 @@
 import $ from "jquery";
+import i18next from "i18next";
 import 'normalize.css';
 import '../tailwind.css'
 import '../scss/style.scss';
@@ -34,24 +35,10 @@ $(function () {
             .removeClass("cn en")
             .addClass(localStorage.getItem("lang") || "cn");
 
-        $.localInit(code);
-    });
-
-    $langItem.click(function () {
-        const selectText = $(this).html();
-        $(this).removeClass("select");
-
-        $(this).each(function () {
-            if ($(this).html() == selectText) {
-                $(this).addClass("select");
-            }
-        });
-        const code = langCode[$(this).html().toLowerCase()];
-        localStorage.setItem("lang", code);
-        $("body")
-            .removeClass("cn en")
-            .addClass(localStorage.getItem("lang") || "cn");
-        $.localInit(code);
+            i18next.changeLanguage(code, function(err, t) {
+                // 翻譯整個頁面
+                $('body').localize();
+            });
     });
 
     $langItem.each(function () {

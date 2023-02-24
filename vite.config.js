@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss'
+import path from 'path';
 export default () => {
   return defineConfig({
     plugins: [
