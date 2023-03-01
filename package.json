@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp -r locales dist/locales",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "percy exec -- cypress run"
   },
   "devDependencies": {
+    "@percy/cli": "^1.20.0",
+    "@percy/cypress": "^3.1.2",
     "@vitejs/plugin-legacy": "^2.3.1",
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.7.0",
     "i18next-http-backend": "^2.1.1",
     "postcss": "^8.4.19",
     "sass": "^1.56.1",
