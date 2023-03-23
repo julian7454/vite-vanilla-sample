@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp -r locales dist/locales",
+    "build": "vite build && cp -r src/locales dist/locales",
     "preview": "vite preview",
     "test": "percy exec -- cypress run",
-    "lint": "eslint"
+    "lint": "eslint js"
   },
   "devDependencies": {
     "@percy/cli": "^1.20.0",
