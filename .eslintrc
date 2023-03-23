@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "plugins": [
+        "zero-config"
+    ],
+    "extends": ["plugin:zero-config/recommended", "plugin:zero-config/browser"],
+    "parserOptions": {
+        "ecmaVersion": 2023,
+        "sourceType": "module"
+    }
+}
