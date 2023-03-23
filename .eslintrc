@@ -4,11 +4,17 @@
         "es6": true
     },
     "plugins": [
-        "zero-config"
+        "zero-config",
+        "@typescript-eslint"
     ],
-    "extends": ["plugin:zero-config/recommended", "plugin:zero-config/browser"],
+    "extends": [
+        "plugin:zero-config/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:zero-config/browser"
+    ],
     "parserOptions": {
         "ecmaVersion": 2023,
         "sourceType": "module"
-    }
+    },
+    "parser": "@typescript-eslint/parser"
 }
