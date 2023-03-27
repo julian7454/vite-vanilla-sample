@@ -2,7 +2,7 @@ import $ from "jquery";
 import i18next from "i18next";
 import jqueryI18next from "jquery-i18next";
 import i18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
-import Backend from 'i18next-http-backend';
+// import Backend from 'i18next-http-backend';
 import { cn as headerCN, en as headerEN } from "./header";
 
 $(function () {
@@ -18,30 +18,29 @@ $(function () {
         i18next
             // detect user language
             // learn more: https://github.com/i18next/i18next-browser-languageDetector
-            .use(Backend)
-            //.use(i18nextBrowserLanguageDetector)
+            //.use(Backend)
+            .use(i18nextBrowserLanguageDetector)
             // init i18next
             // for all options read: https://www.i18next.com/overview/configuration-options
             .init(
                 {
                     debug: true,
                     fallbackLng: "cn",
-                    backend: {
-                        // loadPath: '/js/i18n/translation.json'
-                        loadPath: '/locales/{{lng}}/{{ns}}.json'
-                    }
-                    //   resources: {
-                    //     en: {
-                    //       translation: {
-                    //         header: headerEN,
-                    //       },
-                    //     },
-                    //     cn: {
-                    //       translation: {
-                    //         header: headerCN,
-                    //       },
-                    //     },
-                    //   },
+                    // backend: {
+                    //     loadPath: 'src/locales/{{lng}}/{{ns}}.json'
+                    // }
+                    resources: {
+                        en: {
+                            translation: {
+                                header: headerEN,
+                            },
+                        },
+                        cn: {
+                            translation: {
+                                header: headerCN,
+                            },
+                        },
+                    },
                 },
                 (err, t) => {
                     // if (err) return console.error(err);
