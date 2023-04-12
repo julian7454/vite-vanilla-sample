@@ -8,7 +8,8 @@
     "build": "vite build && cp -r src/locales dist/locales",
     "preview": "vite preview",
     "test": "percy exec -- cypress run",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@percy/cli": "^1.20.0",
@@ -26,7 +27,8 @@
     "tailwindcss": "^3.2.4",
     "terser": "^5.15.1",
     "typescript": "^5.0.2",
-    "vite": "^3.2.3"
+    "vite": "^3.2.3",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "gsap": "^3.11.3",
@@ -35,5 +37,8 @@
     "jquery": "^3.6.3",
     "jquery-i18next": "^1.2.1",
     "normalize.css": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=15.14.0"
   }
 }
