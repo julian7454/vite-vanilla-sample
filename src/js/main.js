@@ -25,7 +25,7 @@ $(".lang-select-menu button").click(function () {
     $langItem.removeClass("select");
 
     $langItem.each(function () {
-        if ($(this).html() == selectText) {
+        if ($(this).html() === selectText) {
             $(this).addClass("select");
         }
     });
@@ -34,7 +34,7 @@ $(".lang-select-menu button").click(function () {
         .removeClass("cn en")
         .addClass(localStorage.getItem("lang") || "cn");
 
-        i18next.changeLanguage(code, function(err, t) {
+        i18next.changeLanguage(code, function() {
             // 翻譯整個頁面
             $('body').localize();
         });

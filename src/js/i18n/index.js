@@ -14,7 +14,7 @@ $(function () {
         window.i18next_initialized(lng);
     });
 
-    function localInit(lng = "cn") {
+    function localInit() {
         i18next
             // detect user language
             // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -42,7 +42,7 @@ $(function () {
                         },
                     },
                 },
-                (err, t) => {
+                () => {
                     // if (err) return console.error(err);
                     // for options see
                     // https://github.com/i18next/jquery-i18next#initialize-the-plugin
